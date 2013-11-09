@@ -32,7 +32,7 @@ gem 'jquery-rails'
 # gem 'unicorn'
 
 # Deploy with Capistrano
-gem 'capistrano'
+gem 'capistrano', '~> 2.15.5', group: :development
 
 # To use debugger
 # gem 'debugger'
@@ -46,9 +46,11 @@ gem 'neo4j-community'
 gem 'neo4j-advanced'
 gem 'neo4j-enterprise'
 
-gem "torquebox-server"
-gem "torquebox"
-gem "torquebox-rake-support"
+group :development, :test do
+  gem "torquebox-server"
+  gem "torquebox"
+  gem "torquebox-rake-support"
+  gem 'torquebox-capistrano-support'
+end
 
-gem 'torquebox-capistrano-support', :group => :development
 
