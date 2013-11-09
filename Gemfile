@@ -41,16 +41,17 @@ group :development, :test do
   gem "rspec-rails"
 end
 
-gem "neo4j", "2.3.0"
-gem 'neo4j-community'
-gem 'neo4j-advanced'
-gem 'neo4j-enterprise'
+gem "neo4j", ">= 2.2.3"
+gem 'neo4j-community', '1.9.M03'
+gem 'neo4j-advanced', '1.9.M03'
+gem 'neo4j-enterprise', '1.9.M03'
+
 
 group :development, :test do
-  gem "torquebox-server"
-  gem "torquebox"
-  gem "torquebox-rake-support"
-  gem 'torquebox-capistrano-support'
+  gem "torquebox-server", '3.0.0'
+  gem "torquebox", '3.0.0'
+  gem "torquebox-rake-support", '3.0.0'
+  gem 'torquebox-capistrano-support', '3.0.0'
 end
 
 
